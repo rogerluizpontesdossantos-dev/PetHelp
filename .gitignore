@@ -1,0 +1,36 @@
+# Bundler
+Gemfile.lock
+
+# SQLite
+*.sqlite3
+db/*.sqlite3
+
+# Environment variables
+.env
+
+# Credentials
+config/master.key
+config/credentials.yml.enc
+
+# Logs
+log/*
+*.log
+
+# Temp files
+tmp/*
+*.tmp
+
+# Ruby specific
+.ruby-version
+.yardoc/
+
+# Sidekiq
+sidekix/*.pid
+
+# Action Mailer previews
+spec/previews
+
+# Creditials
+*.key
+*.pem
+*.crt
