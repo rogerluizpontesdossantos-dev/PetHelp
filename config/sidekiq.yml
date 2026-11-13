@@ -1,0 +1,12 @@
+:concurrency: 5
+:queues:
+  - default
+  - follow_ups
+  - notifications
+
+:scheduler:
+  :schedule:
+    mark_overdue_follow_ups:
+      cron: "0 6 * * *"
+      class: MarkOverdueFollowUpsJob
+      queue: follow_ups
