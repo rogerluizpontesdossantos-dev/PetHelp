@@ -20,5 +20,7 @@ module Pethelp
 
     config.autoload_paths << Rails.root.join("app/lib")
     config.autoload_paths << Rails.root.join("app/serializers")
+    config.eager_load_paths << Rails.root.join("app/lib")
+    config.eager_load_paths << Rails.root.join("app/serializers")
   end
 end

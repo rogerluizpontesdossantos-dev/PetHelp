@@ -6,8 +6,8 @@ class Pet < ApplicationRecord
   has_many :follow_ups, dependent: :destroy
   has_one_attached :photo
 
-  enum species: { dog: 0, cat: 1, other: 2 }, _prefix: :species
-  enum size: { small: 0, medium: 1, large: 2 }, _prefix: :size
+  enum :species, { dog: 0, cat: 1, other: 2 }, prefix: :species
+  enum :size, { small: 0, medium: 1, large: 2 }, prefix: :size
 
   validates :name, presence: true
   validates :city, presence: true

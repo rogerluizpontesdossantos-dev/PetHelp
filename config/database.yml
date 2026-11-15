@@ -2,16 +2,19 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: <%= ENV["DATABASE_URL"] %>
 
 development:
   <<: *default
-  database: pethelp_development
+  url: postgresql://127.0.0.1:1234/pethelp_development
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
 
 test:
   <<: *default
-  database: pethelp_test
+  url: postgresql://127.0.0.1:1234/pethelp_test
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
 
 production:
   <<: *default
-  database: pethelp_production
+  url: <%= ENV["DATABASE_URL"] %>
